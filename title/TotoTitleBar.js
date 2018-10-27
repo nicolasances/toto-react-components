@@ -129,6 +129,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingHorizontal: 12,
     backgroundColor: theme.theme.COLOR_THEME,
+    shadowRadius: 0,
+    shadowOffset: {
+      height: 0,
+    },
+    shadowColor: 'transparent',
   },
   titleContainer : {
     flex: 1,
