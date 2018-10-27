@@ -1,0 +1,21 @@
+{
+  "name": "toto-react-components",
+  "version": "1.8.0",
+  "description": "React components (graphs, utilities, etc..) for Toto",
+  "main": "index.ios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.5.2",
+    "react-native": "^0.57.3",
+    "react-native-google-signin": "^1.0.0-rc7",
+    "react-navigation": "^2.18.0",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "^4.0.1"
+  }
+}
