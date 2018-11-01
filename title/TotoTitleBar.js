@@ -18,6 +18,7 @@ import * as TotoEventBus from '../event/TotoEventBus';
  *                    },
  *                  }
  * - leftButton   : (optional) same as right button
+ * - color        : (optional, default COLOR_THEME) the background color to use
  */
 class TotoTitleBar extends Component {
 
@@ -28,6 +29,9 @@ class TotoTitleBar extends Component {
     this.state = {
       notificationText: null,
     }
+
+    // Default values
+    this.color = this.props.color == null ? theme.theme.COLOR_THEME : this.props.color;
   }
 
   /**
@@ -100,10 +104,13 @@ class TotoTitleBar extends Component {
       )
     }
 
+    // Color style
+    let color = {backgroundColor: this.color};
+
     // Return the view
     return (
 
-      <View style={styles.titleBar}>
+      <View style={[styles.titleBar, color]}>
 
         {backButton}
         {leftButton}
@@ -128,7 +135,6 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     justifyContent: 'flex-end',
     paddingHorizontal: 12,
-    backgroundColor: theme.theme.COLOR_THEME,
     shadowRadius: 0,
     shadowOffset: {
       height: 0,
