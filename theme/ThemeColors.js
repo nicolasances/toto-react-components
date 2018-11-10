@@ -75,6 +75,7 @@ const lightMode = {
   COLOR_ACCENT_DARK : '#c8b900',
   COLOR_TEXT: 'rgba(0,0,0,0.7)',
   COLOR_TEXT_ACCENT: 'rgba(0,0,0,0.7)',
+  COLOR_TEXT_LIGHT: 'rgba(255,255,255,0.7)',
 }
 
 const darkMode = {
@@ -87,6 +88,7 @@ const darkMode = {
   COLOR_ACCENT_DARK : '#cabf45',
   COLOR_TEXT: 'rgba(255,255,255,0.7)',
   COLOR_TEXT_ACCENT: 'rgba(0,0,0,0.7)',
+  COLOR_TEXT_LIGHT: 'rgba(255,255,255,0.7)',
 }
 
 export default new TotoTheme();
