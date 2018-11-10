@@ -33,7 +33,7 @@ class TotoTitleBar extends Component {
 
     // Default values
     this.color = this.props.color == null ? theme.theme.COLOR_THEME : this.props.color;
-    this.titleColor = this.props.titleColor == null ? theme.theme.COLOR_TEXT this.props.titleColor;
+    this.titleColor = this.props.titleColor == null ? theme.theme.COLOR_TEXT : this.props.titleColor;
   }
 
   /**
