@@ -1,6 +1,6 @@
 {
   "name": "toto-react-components",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "React components (graphs, utilities, etc..) for Toto",
   "main": "index.ios.js",
   "scripts": {
