@@ -47,7 +47,7 @@ class TotoTitleBar extends Component {
     if (this.props.back) {
       backButton = (
         <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-          <Image source={require('./back.png')}  style={{width: 24, height: 24, tintColor: theme.theme.COLOR_TEXT}} />
+          <Image source={require('./back.png')}  style={{width: 24, height: 24, tintColor: this.titleColor}} />
         </TouchableOpacity>
       )
     }
