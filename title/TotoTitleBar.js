@@ -19,6 +19,7 @@ import * as TotoEventBus from '../event/TotoEventBus';
  *                  }
  * - leftButton   : (optional) same as right button
  * - color        : (optional, default COLOR_THEME) the background color to use
+ * - titleColor   : (optional, default COLOR_TEXT) the color of the title
  */
 class TotoTitleBar extends Component {
 
@@ -32,6 +33,7 @@ class TotoTitleBar extends Component {
 
     // Default values
     this.color = this.props.color == null ? theme.theme.COLOR_THEME : this.props.color;
+    this.titleColor = this.props.titleColor == null ? theme.theme.COLOR_TEXT this.props.titleColor;
   }
 
   /**
@@ -74,7 +76,7 @@ class TotoTitleBar extends Component {
     // Define the title of the screen
     let title = (
       <View style={{flex: 1, alignItems: 'center'}}>
-        <Text style={styles.title}>{this.props.title}</Text>
+        <Text style={[styles.title, {color: this.titleColor}]}>{this.props.title}</Text>
       </View>
     )
 
@@ -147,7 +149,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    color: theme.theme.COLOR_TEXT,
     height: 24,
   },
   container: {
