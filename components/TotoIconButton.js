@@ -67,7 +67,7 @@ export default class TotoIconButton extends Component {
       let labelMarginTop = 6;
       if (this.props.size == 'xxl') labelMarginTop = 12;
 
-      label = (<Text style={{styles.label, fontSize: labelFontSize, marginTop: labelMarginTop}}>{this.props.label}</Text>)
+      label = (<Text style={{...styles.label, fontSize: labelFontSize, marginTop: labelMarginTop}}>{this.props.label}</Text>)
     }
 
     return (
