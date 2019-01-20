@@ -3,7 +3,7 @@ var TotoSignIn = require('./login/TotoSignIn');
 var TotoEventBus = require('./event/TotoEventBus');
 var TotoTheme = require('./theme/ThemeColors');
 var TotoTitleBar = require('./title/TotoTitleBar');
-var TotoIconButton = require('./title/TotoIconButton');
+var TotoIconButton = require('./components/TotoIconButton');
 
 module.exports = {
   TotoLoginComponent: TotoLoginComponent.TotoLoginComponent,
