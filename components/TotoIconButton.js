@@ -58,7 +58,16 @@ export default class TotoIconButton extends Component {
     let label;
 
     if (this.props.label) label = (
-      <Text style={styles.label}>{this.props.label}</Text>
+
+      // Define the size of the label based on the size of the button
+      let labelFontSize = 10;
+      if (this.props.size == 'xxl') labelFontSize = 14;
+
+      // Define the margin from the top based on the size of the button
+      let labelMarginTop = 6;
+      if (this.props.size == 'xxl') labelMarginTop = 12;
+
+      <Text style={styles.label, {fontSize: labelFontSize, marginTop: labelMarginTop}}>{this.props.label}</Text>
     )
 
     return (
@@ -87,9 +96,7 @@ const styles = StyleSheet.create({
   },
   label: {
     color: theme.theme.COLOR_ACCENT,
-    fontSize: 10,
     textAlign: 'center',
-    marginTop: 6,
     textTransform: 'uppercase'
   },
 });
