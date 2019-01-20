@@ -8,7 +8,7 @@ import theme from '../theme/ThemeColors';
  * - onPress        : function called when the button is pressed
  * - secondary      : true if the button should be a secondary button
  * - image          : the image to use
- * - size           : (optional, default: 'm') can be 'l', 'xl', 'm', 's'
+ * - size           : (optional, default: 'm') can be 'xxl', 'xl', 'l', 'm', 's', 'xs'
  * - label          : (optional, default: none) shows a label
  */
 export default class TotoIconButton extends Component {
@@ -29,13 +29,17 @@ export default class TotoIconButton extends Component {
     let iconSize = 20;
 
     // Change the size based on the 'size' prop
-    if (this.props.size == 'l') {
-      containerSize = 60;
-      iconSize = 32;
+    if (this.props.size == 'xxl') {
+      containerSize = 120;
+      iconSize = 54;
     }
     else if (this.props.size == 'xl') {
       containerSize = 72;
       iconSize = 38;
+    }
+    else if (this.props.size == 'l') {
+      containerSize = 60;
+      iconSize = 32;
     }
     else if (this.props.size == 's') {
       containerSize = 24;
