@@ -57,7 +57,7 @@ export default class TotoIconButton extends Component {
     // Define the label component if any
     let label;
 
-    if (this.props.label) label = (
+    if (this.props.label) {
 
       // Define the size of the label based on the size of the button
       let labelFontSize = 10;
@@ -67,8 +67,8 @@ export default class TotoIconButton extends Component {
       let labelMarginTop = 6;
       if (this.props.size == 'xxl') labelMarginTop = 12;
 
-      <Text style={styles.label, {fontSize: labelFontSize, marginTop: labelMarginTop}}>{this.props.label}</Text>
-    )
+      label = (<Text style={styles.label, {fontSize: labelFontSize, marginTop: labelMarginTop}}>{this.props.label}</Text>)
+    }
 
     return (
 
