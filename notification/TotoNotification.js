@@ -126,7 +126,7 @@ export default class TotoNotification extends Component {
 
 const styles = StyleSheet.create({
   notificationContainer: {
-    backgroundColor: theme.theme.color().COLOR_ACCENT_LIGHT,
+    backgroundColor: theme.theme.COLOR_ACCENT_LIGHT,
     padding: 12,
     marginHorizontal: 6,
     flex: 1,
@@ -138,6 +138,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    color: theme.theme.color().COLOR_TEXT_ACCENT
+    color: theme.theme.COLOR_TEXT_ACCENT
   }
 })
