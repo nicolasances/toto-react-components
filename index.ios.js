@@ -4,6 +4,7 @@ var TotoEventBus = require('./event/TotoEventBus');
 var TotoTheme = require('./theme/ThemeColors');
 var TotoTitleBar = require('./title/TotoTitleBar');
 var TotoIconButton = require('./comp/TotoIconButton');
+var TotoNotification = require('./notification/TotoNotification');
 
 module.exports = {
   TotoLoginComponent: TotoLoginComponent.TotoLoginComponent,
@@ -11,5 +12,6 @@ module.exports = {
   TotoEventBus: TotoEventBus,
   TotoTheme: TotoTheme.default,
   TotoTitleBar: TotoTitleBar.default,
-  TotoIconButton: TotoIconButton.default
+  TotoIconButton: TotoIconButton.default,
+  TotoNotification: TotoNotification.default
 }
