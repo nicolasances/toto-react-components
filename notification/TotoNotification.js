@@ -36,7 +36,7 @@ export default class TotoNotification extends Component {
     });
 
     // Subscribe to events
-    TotoEventBus.bus.subscribeToEvent('notification', this.onNotification);
+    TotoEventBus.subscribeToEvent('notification', this.onNotification);
   }
 
   /**
@@ -44,7 +44,7 @@ export default class TotoNotification extends Component {
    */
   componentWillUnmount() {
     // Unsubscribe to the events
-    TotoEventBus.bus.unsubscribeToEvent('notification', this.onNotification);
+    TotoEventBus.unsubscribeToEvent('notification', this.onNotification);
   }
 
   /**
