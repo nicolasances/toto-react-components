@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Dimensions, Animated, Easing} from 'react-native';
-import * as theme from '../styles/ThemeColors';
-import * as TotoEventBus from '../services/TotoEventBus';
+import * as theme from '../theme/ThemeColors';
+import bus from '../event/TotoEventBus';
 
 const window = Dimensions.get('window');
 
@@ -126,7 +126,7 @@ export default class TotoNotification extends Component {
 
 const styles = StyleSheet.create({
   notificationContainer: {
-    backgroundColor: theme.color().COLOR_ACCENT_LIGHT,
+    backgroundColor: theme.theme.color().COLOR_ACCENT_LIGHT,
     padding: 12,
     marginHorizontal: 6,
     flex: 1,
@@ -138,6 +138,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    color: theme.color().COLOR_TEXT_ACCENT
+    color: theme.theme.color().COLOR_TEXT_ACCENT
   }
 })
