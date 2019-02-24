@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Dimensions, Animated, Easing} from 'react-native';
 import theme from '../theme/ThemeColors';
-import TotoEventBus from '../event/TotoEventBus';
+import * as TotoEventBus from '../event/TotoEventBus';
+
+console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+console.log(TotoEventBus);
 
 const window = Dimensions.get('window');
 
