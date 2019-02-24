@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Dimensions, Animated, Easing} from 'react-native';
-import * as theme from '../theme/ThemeColors';
+import theme from '../theme/ThemeColors';
 import TotoEventBus from '../event/TotoEventBus';
 
 const window = Dimensions.get('window');
