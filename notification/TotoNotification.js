@@ -3,9 +3,6 @@ import {View, Text, StyleSheet, Dimensions, Animated, Easing} from 'react-native
 import theme from '../theme/ThemeColors';
 import * as TotoEventBus from '../event/TotoEventBus';
 
-console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
-console.log(TotoEventBus);
-
 const window = Dimensions.get('window');
 
 export default class TotoNotification extends Component {
