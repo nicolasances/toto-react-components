@@ -10,6 +10,7 @@ import theme from '../theme/ThemeColors';
  * - image          : the image to use
  * - size           : (optional, default: 'm') can be 'xxl', 'xl', 'l', 'm', 's', 'xs'
  * - label          : (optional, default: none) shows a label
+ * - disabled       : (optional, default false) disables the button
  */
 export default class TotoIconButton extends Component {
 
@@ -18,6 +19,8 @@ export default class TotoIconButton extends Component {
    */
   constructor(props) {
     super(props);
+
+    if (this.props.disabled == null) this.props.disabled = false;
   }
 
   /**
@@ -73,7 +76,7 @@ export default class TotoIconButton extends Component {
     return (
 
       <View style={{alignItems: 'center', marginHorizontal: 6}}>
-        <TouchableOpacity style={[styles.container, containerSizeStyle]} onPress={this.props.onPress}>
+        <TouchableOpacity disabled={this.props.disabled} style={[styles.container, containerSizeStyle]} onPress={this.props.onPress}>
           <Image style={[styles.image, iconSizeStyle]} source={this.props.image} />
         </TouchableOpacity>
         {label}
