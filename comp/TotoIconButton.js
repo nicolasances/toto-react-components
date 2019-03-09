@@ -61,14 +61,14 @@ export default class TotoIconButton extends Component {
       if (this.props.disabled) {
 
         imageColor = {tintColor: theme.theme.COLOR_DISABLED};
-        containerBorderColor = {tintColor: theme.theme.COLOR_DISABLED};
-        labelColor = {tintColor: theme.theme.COLOR_DISABLED};
+        containerBorderColor = {borderColor: theme.theme.COLOR_DISABLED};
+        labelColor = {color: theme.theme.COLOR_DISABLED};
       }
       else {
 
         imageColor = {tintColor: theme.theme.COLOR_ACCENT};
-        containerBorderColor = {tintColor: theme.theme.COLOR_ACCENT};
-        labelColor = {tintColor: theme.theme.COLOR_ACCENT};
+        containerBorderColor = {borderColor: theme.theme.COLOR_ACCENT};
+        labelColor = {color: theme.theme.COLOR_ACCENT};
       }
 
     // Define the label component if any
@@ -84,7 +84,7 @@ export default class TotoIconButton extends Component {
       let labelMarginTop = 6;
       if (this.props.size == 'xxl') labelMarginTop = 12;
 
-      label = (<Text style={[labelColor, {...styles.label, fontSize: labelFontSize, marginTop: labelMarginTop}]}>{this.props.label}</Text>)
+      label = (<Text style={[labelColor, styles.label, {fontSize: labelFontSize, marginTop: labelMarginTop}]}>{this.props.label}</Text>)
     }
 
     return (
