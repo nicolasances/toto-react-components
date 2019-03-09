@@ -57,6 +57,20 @@ export default class TotoIconButton extends Component {
     let containerSizeStyle = {width: containerSize, height: containerSize, borderRadius: containerSize / 2};
     let iconSizeStyle = {width: iconSize, height: iconSize};
 
+      // Define the coloring based on if this button is disabled or not
+      if (this.props.disabled) {
+
+        imageColor = {tintColor: theme.theme.COLOR_DISABLED};
+        containerBorderColor = {tintColor: theme.theme.COLOR_DISABLED};
+        labelColor = {tintColor: theme.theme.COLOR_DISABLED};
+      }
+      else {
+
+        imageColor = {tintColor: theme.theme.COLOR_ACCENT};
+        containerBorderColor = {tintColor: theme.theme.COLOR_ACCENT};
+        labelColor = {tintColor: theme.theme.COLOR_ACCENT};
+      }
+
     // Define the label component if any
     let label;
 
@@ -70,14 +84,14 @@ export default class TotoIconButton extends Component {
       let labelMarginTop = 6;
       if (this.props.size == 'xxl') labelMarginTop = 12;
 
-      label = (<Text style={{...styles.label, fontSize: labelFontSize, marginTop: labelMarginTop}}>{this.props.label}</Text>)
+      label = (<Text style={[labelColor, {...styles.label, fontSize: labelFontSize, marginTop: labelMarginTop}]}>{this.props.label}</Text>)
     }
 
     return (
 
       <View style={{alignItems: 'center', marginHorizontal: 6}}>
-        <TouchableOpacity disabled={this.props.disabled} style={[styles.container, containerSizeStyle]} onPress={this.props.onPress}>
-          <Image style={[styles.image, iconSizeStyle]} source={this.props.image} />
+        <TouchableOpacity disabled={this.props.disabled} style={[styles.container, containerSizeStyle, containerBorderColor]} onPress={this.props.onPress}>
+          <Image style={[styles.image, iconSizeStyle, imageColor]} source={this.props.image} />
         </TouchableOpacity>
         {label}
       </View>
@@ -91,14 +105,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     borderWidth: 2,
-    borderColor: theme.theme.COLOR_ACCENT,
   },
   image: {
-    tintColor: theme.theme.COLOR_ACCENT,
     alignItems: 'center',
   },
   label: {
-    color: theme.theme.COLOR_ACCENT,
     textAlign: 'center',
     textTransform: 'uppercase'
   },
