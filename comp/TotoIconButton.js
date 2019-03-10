@@ -20,7 +20,7 @@ export default class TotoIconButton extends Component {
   constructor(props) {
     super(props);
 
-    if (this.props.disabled == null) this.props.disabled = false;
+    if (props.disabled == null) this.props.disabled = false;
   }
 
   /**
