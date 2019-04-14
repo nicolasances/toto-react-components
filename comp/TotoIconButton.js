@@ -46,7 +46,7 @@ export default class TotoIconButton extends Component {
     }
     else if (this.props.size == 'ms') {
       containerSize = 40;
-      iconSize = 26;
+      iconSize = 22;
     }
     else if (this.props.size == 's') {
       containerSize = 24;
